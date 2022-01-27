@@ -1,3 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components{
+    .heading-text{
+        @apply text-lg font-semibold leading-6 text-gray-900;
+    }
+
+    .supporting-text{
+        @apply text-sm text-gray-300;
+    }
+}
