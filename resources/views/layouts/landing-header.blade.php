@@ -7,17 +7,16 @@
         <title>{{ config('app.name', 'Permits') }}</title>
         <!-- CSRF Token -->
         <meta name="csrf-token" content="{{ csrf_token() }}">  
-
+        <link href="{{ asset('css/app.css') }}" rel="stylesheet">
         @stack('page-css')
     </head>
 
 
-    <body class="font-body bg-gray-50">
+    <body class="bg-gray-50">
         <div id="app">
             @yield('content')
         </div>
 
-        
         <script src="{{ asset('js/app.js') }}"></script>
         @stack('page-js')
     </body>
