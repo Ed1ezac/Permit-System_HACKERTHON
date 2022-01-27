@@ -10,4 +10,12 @@
     .supporting-text{
         @apply text-sm text-gray-300;
     }
+
+    .my-form-label{
+        @apply font-light text-gray-700 tracking-wide;
+    }
+
+    .my-form-input{
+        @apply block border border-gray-400 text-gray-900 font-medium;
+    }
 }
