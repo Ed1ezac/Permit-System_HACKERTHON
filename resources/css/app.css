@@ -4,7 +4,7 @@
 
 @layer components{
     .heading-text{
-        @apply text-lg font-semibold leading-6 text-gray-900;
+        @apply text-lg font-semibold leading-6 text-gray-700;
     }
 
     .supporting-text{
@@ -16,6 +16,6 @@
     }
 
     .my-form-input{
-        @apply block border border-gray-400 text-gray-900 font-medium;
+        @apply block w-full border border-gray-400 text-gray-900 font-medium;
     }
 }
