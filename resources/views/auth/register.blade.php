@@ -1,11 +1,11 @@
 @extends('layouts.landing-header')
 
 @section('content')
-<section class="pt-20">
+<section class="pt-20 pb-10">
     <div class="flex justify-center">
 
         <div class="w-96">
-            <div class="bg-white shadow rounded">
+            <div class="bg-white shadow rounded pt-5">
                 <div class="heading-text text-center">{{ __('Register') }}</div>
                 <div class="p-4">
                     <form method="POST" action="{{ route('register') }}">
@@ -56,8 +56,8 @@
                         </div>
 
                         <div class="flex flex-col mb-0">
-                            <div class="p-2 w-25 text-center bg-gray-300 text-base rounded">
-                                <button type="submit" class="">
+                            <div class="p-2 text-center text-base">
+                                <button type="submit" class="bg-gray-300 p-2 w-full rounded">
                                     {{ __('Register') }}
                                 </button>
                             </div>
