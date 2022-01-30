@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ApplicationsController;
+use App\Http\Controllers\LondonController;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,7 +22,8 @@ Route::get('/', [ApplicationsController::class, 'index'])->name('landing');
 Route::get('/MyApplications', [ApplicationsController::class, 'myApplications']);
 Route::get('/BusinessDetails', [ApplicationsController::class, 'businessDetails']);
 Route::get('/UploadDocuments', [ApplicationsController::class, 'uploadDocuments']);
-Route::get('/Payment-And-Submit', [ApplicationsController::class, 'payment']);
+
+
 
 Auth::routes();
 Route::get('/home', [HomeController::class, 'index'])->name('home');
