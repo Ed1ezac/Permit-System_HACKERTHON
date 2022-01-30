@@ -14,37 +14,38 @@
 
         <div class="col-span-1 px-8">
             <div class="bg-white rounded shadow-md p-4">
-                <form action="/proceed/from/step/1" type="GET">
-                <div class="flex flex-col mb-3">
-                    <label for="name" class="my-form-label">{{ __('Full Name') }}</label>
-                    <input type="text" name="name" value="{{ old('name') }}" class="my-form-input 
-                        @error('name') bg-red-300 @enderror" required autocomplete="name">
-                    @error('name')
-                        <span class="bg-red-200 text-red-800" role="alert">
-                            <strong>{{ $message }}</strong>
-                        </span>
-                    @enderror                            
-                </div>
-                <div class="flex flex-col mb-3">
-                    <label for="email" class="my-form-label">{{ __('Email Address') }}</label>
-                    <input type="email" name="email" value="{{ old('email') }}" class="my-form-input 
-                        @error('email') bg-red-300 @enderror" required autocomplete="email">
-                    @error('email')
-                        <span class="bg-red-200 text-red-800" role="alert">
-                            <strong>{{ $message }}</strong>
-                        </span>
-                    @enderror                            
-                </div>
-                <div class="flex flex-col mb-3">
-                    <label for="identity_no" class="my-form-label">{{ __('ID/Passport Number') }}</label>
-                    <input type="text" name="identity_no" value="{{ old('identity_no') }}" class="my-form-input 
-                        @error('identity_no') bg-red-300 @enderror" required autocomplete="identity_no">
-                    @error('identity_no')
-                        <span class="bg-red-200 text-red-800" role="alert">
-                            <strong>{{ $message }}</strong>
-                        </span>
-                    @enderror                            
-                </div>
+                <form action="/proceed" type="GET">
+                    @csrf
+                    <div class="flex flex-col mb-3">
+                        <label for="name" class="my-form-label">{{ __('Full Name') }}</label>
+                        <input type="text" name="name" value="{{ old('name') }}" class="my-form-input 
+                            @error('name') bg-red-200 border border-red-500 @enderror" required autocomplete="name">
+                        @error('name')
+                            <span class="mt-1 px-1 bg-red-200 text-red-500" role="alert">
+                                <strong class="text-sm">{{ $message }}</strong>
+                            </span>
+                        @enderror                            
+                    </div>
+                    <div class="flex flex-col mb-3">
+                        <label for="email" class="my-form-label">{{ __('Email Address') }}</label>
+                        <input type="email" name="email" value="{{ old('email') }}" class="my-form-input 
+                            @error('email') bg-red-200 border border-red-500 @enderror" required autocomplete="email">
+                        @error('email')
+                            <span class="mt-1 px-1 bg-red-200 text-red-500" role="alert">
+                                <strong class="text-sm">{{ $message }}</strong>
+                            </span>
+                        @enderror                            
+                    </div>
+                    <div class="flex flex-col mb-3">
+                        <label for="identity_no" class="my-form-label">{{ __('ID/Passport Number') }}</label>
+                        <input type="text" name="identity_no" value="{{ old('identity_no') }}" class="my-form-input 
+                            @error('identity_no') bg-red-300 border border-red-500 @enderror" required autocomplete="identity_no">
+                        @error('identity_no')
+                            <span class="mt-1 px-1 bg-red-200 text-red-500" role="alert">
+                                <strong class="text-sm">{{ $message }}</strong>
+                            </span>
+                        @enderror                            
+                    </div>
                     <div class="flex flex-col mb-3">
                         <label for="type" class="my-form-label">{{ __('ID/Passport Number') }}</label>
                         <select name="permit_type" id="type">
@@ -55,6 +56,9 @@
                             <option value="4">Other</option>
                         </select>                             
                     </div>
+
+                    <input type="hidden" name="step" value="1">
+
                     <div class="flex mt-6 mb-2 justify-end">
                         <button type="submit" class="my-button">
                             Next
