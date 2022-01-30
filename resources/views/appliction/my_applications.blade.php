@@ -7,7 +7,7 @@
     <div class="mt-2 border-t-2 border-gray-300 mx-8 sm:mx-16"></div>
 </div>
 <section>
-    <div class="bg-white p-4 mt-3 flex flex-col mx-8 sm:mx-16 rounded shadow-md">
+    <div class="bg-white p-4 mt-3 flex flex-col mx-8 sm:mx-16 rounded shadow-md"> 
         <div class="flex justify-between">
             <a href="/permit/details" class="hover:underline hover:underline-offset-2 decoration-2 decoration-gray-700">
                 <h3 class="heading-text">Noise and Nuisance Permit (06/02/22)</h3>
