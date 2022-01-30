@@ -2,16 +2,9 @@
 
 @section('content')
 <div class="pt-20">
-<<<<<<< HEAD
 
 <div class="flex justify-center">
     <div class="flex flex-col items-center justify-center">
-=======
-    <div class="flex justify-center">
-        <div class="max-w-sm">
-            <div class="bg-white shadow rounded">
-                <div class="heading-text m-4">{{ __('Login') }}</div>
->>>>>>> bd2fce3ee7e8e0a705dcecefa3697957e2ffc3a2
 
                 <div class="m-4 ">
                     <form method="POST" action="{{ route('login') }}">

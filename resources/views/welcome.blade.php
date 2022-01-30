@@ -1,7 +1,6 @@
 @extends('layouts.landing-header')
     
 @section('content')
-<<<<<<< HEAD
 <section class="pt-10 my-16 flex">
     <div class="sm:grid sm:grid-cols-2 gap-4 max-w-7xl mb-16">
         <div class="col col-span-1 px-8">
@@ -15,6 +14,7 @@
 
         <div class="col-span-1 px-8">
             <div class="bg-white rounded shadow-md p-4">
+                <form action="/proceed/from/step/1" type="GET">
                 <div class="flex flex-col mb-3">
                     <label for="name" class="my-form-label">{{ __('Full Name') }}</label>
                     <input type="text" name="name" value="{{ old('name') }}" class="my-form-input 
@@ -45,31 +45,25 @@
                         </span>
                     @enderror                            
                 </div>
-                <div class="flex flex-col mb-3">
-                    <label for="type" class="my-form-label">{{ __('ID/Passport Number') }}</label>
-                    <select name="permit_type" id="type">
-                        <option value="0">Day Care Center</option>
-                        <option value="1">Burial Permit</option>
-                        <option value="2">Noise & Nuisance</option>
-                        <option value="3">Music Concert</option>
-                        <option value="4">Other</option>
-                    </select>                             
-                </div>
-                <div class="flex mt-6 mb-2 justify-end">
-                    <button type="submit" class="py-1 px-16 bg-gray-500 h-10 hover:bg-gray-800 text-white">
-                        Next
-                    </button>
-                </div>
+                    <div class="flex flex-col mb-3">
+                        <label for="type" class="my-form-label">{{ __('ID/Passport Number') }}</label>
+                        <select name="permit_type" id="type">
+                            <option value="0">Day Care Center</option>
+                            <option value="1">Burial Permit</option>
+                            <option value="2">Noise & Nuisance</option>
+                            <option value="3">Music Concert</option>
+                            <option value="4">Other</option>
+                        </select>                             
+                    </div>
+                    <div class="flex mt-6 mb-2 justify-end">
+                        <button type="submit" class="my-button">
+                            Next
+                        </button>
+                    </div>
+                </form>
             </div>
         </div>
 
-=======
-<section class="antialiased">
-    <div class="relative flex items-top justify-center min-h-screen bg-white dark:bg-gray-900 sm:items-center py-4 sm:pt-0">
-        <div class=" bg-gray-200">
-
-        </div>
->>>>>>> bd2fce3ee7e8e0a705dcecefa3697957e2ffc3a2
     </div>
 </section>
 
