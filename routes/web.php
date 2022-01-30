@@ -24,7 +24,5 @@ Route::get('/BusinessDetails', [ApplicationsController::class, 'businessDetails'
 Route::get('/UploadDocuments', [ApplicationsController::class, 'uploadDocuments']);
 Route::get('/proceed', [ApplicationsController::class, 'proceed']);
 
-
-
 Auth::routes();
 Route::get('/home', [HomeController::class, 'index'])->name('home');
