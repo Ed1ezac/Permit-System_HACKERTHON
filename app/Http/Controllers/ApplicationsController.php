@@ -70,4 +70,9 @@ class ApplicationsController extends Controller
 
     }
 
+    public function myPermits(){
+
+        return view('auth.my_permits');
+    }
+
 }

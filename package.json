@@ -22,7 +22,5 @@
         "vue-loader": "^17.0.0",
         "@vue/compiler-sfc": "^3.2.29"
     },
-    "dependencies": {
-        
-    }
+    "dependencies": {}
 }
