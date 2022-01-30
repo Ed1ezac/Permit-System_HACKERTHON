@@ -35,6 +35,7 @@ class ApplicationsController extends Controller
 
         return view('appliction.my_applications');
     }
+    
 
 
 }
