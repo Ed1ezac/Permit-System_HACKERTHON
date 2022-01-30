@@ -9,5 +9,27 @@
 </template>
 
 <script>
+    export default{
+        data () {
+            return {
 
+            }
+        },
+        props:{
+            currentAdminUrl: {
+                type: String,
+                default: '',
+            },
+        },
+        computed: {
+            isOnAdmin(){
+                return true;//this.currentUrl === 'admin';
+            }
+        },
+        methods:{  
+            logout: function(){
+                this.$refs.mform.submit();
+            },
+        }
+    }
 </script>
