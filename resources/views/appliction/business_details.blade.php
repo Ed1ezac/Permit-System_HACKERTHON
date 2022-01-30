@@ -9,8 +9,8 @@
 <section class="my-16 ">
 
     <div class="sm:grid grid-cols-6 ">
-        <div class="sm:col-span-3">
-
+        <div class="sm:col-span-3 px-8">
+            <application-progress step="{{1}}"></application-progress>
         </div>
         <div class="sm:col-span-3 px-10">
             <div class="bg-white shadow rounded mr-16 p-4 ">
