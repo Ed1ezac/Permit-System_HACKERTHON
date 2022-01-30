@@ -56,7 +56,7 @@ class ApplicationsController extends Controller
 
     private function validateApplication(){
         $request = request();
-
+        $step = $request->input('step');
         switch($step){
             case 1:
                 $this->validateBasicInfo();

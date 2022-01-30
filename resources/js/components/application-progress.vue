@@ -1,14 +1,13 @@
 <template>
-    <div>
-        
-        <div class="progress-background"></div>
+    <div class="h-full bg-red-200">
+        <div class="w-10 bg-gray-400"></div>
         <div class="flex flex-col">
             <div v-for="(step) in steps"
                 v-bind:key="step.label">
                 <div class="">
                     <div class="flex space-x-4">
-                        <div class="h-5 w-5 rounded-full"></div>
-                        <div class="supporting-text">{{ step.label }}</div>
+                        <div class="h-5 w-5 rounded-full bg-gray-400"></div>
+                        <div class="supporting-text text-gray-800">{{ step.label }}</div>
                     </div>
                 </div>
             </div>
