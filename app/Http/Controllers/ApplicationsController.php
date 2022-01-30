@@ -16,7 +16,7 @@ class ApplicationsController extends Controller
 
     public function proceed(Request $request){
 
-        dd($request);
+        //dd($request);
         $step = 1;
 
         validate();
@@ -67,7 +67,7 @@ class ApplicationsController extends Controller
     }
 
     private function validateBasicInfo(){
-        
+
     }
 
 }

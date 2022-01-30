@@ -22,6 +22,7 @@ Route::get('/', [ApplicationsController::class, 'index'])->name('landing');
 Route::get('/MyApplications', [ApplicationsController::class, 'myApplications']);
 Route::get('/BusinessDetails', [ApplicationsController::class, 'businessDetails']);
 Route::get('/UploadDocuments', [ApplicationsController::class, 'uploadDocuments']);
+Route::get('/proceed', [ApplicationsController::class, 'proceed']);
 
 
 

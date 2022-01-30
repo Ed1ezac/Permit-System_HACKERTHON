@@ -14,7 +14,7 @@
         </div>
         <div class="sm:col-span-3 px-10">
             <div class="bg-white shadow rounded mr-16 ">
-                <form method="post" action="####">
+                <form method="get" action="####">
                     <div class="flex flex-col px-4  my-4">
                         
                         <div class=" flex flex-col my-4">
