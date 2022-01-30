@@ -55,7 +55,7 @@
                     </select>                             
                 </div>
                 <div class="flex mt-6 mb-2 justify-end">
-                    <button type="submit" class="py-1 px-20 bg-gray-500 h-10 text-white">
+                    <button type="submit" class="py-1 px-16 bg-gray-500 h-10 hover:bg-gray-800 text-white">
                         Next
                     </button>
                 </div>

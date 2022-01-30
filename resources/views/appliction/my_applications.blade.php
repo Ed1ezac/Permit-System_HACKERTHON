@@ -7,8 +7,6 @@
     <div class="mt-2 border-t-2 border-gray-300 mx-8 sm:mx-16"></div>
 </div>
 <section>
-
 </section>
-
 
 @endsection
