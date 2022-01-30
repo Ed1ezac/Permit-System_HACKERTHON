@@ -8,8 +8,8 @@
 </div>
 <section class="my-16 ">
 
-    <div class="sm:grid grid-cols-6 ">
-        <div class="sm:col-span-3 px-8">
+    <div class="sm:grid grid-cols-5 ">
+        <div class="sm:col-span-2 px-8">
             <application-progress step="{{1}}"></application-progress>
         </div>
         <div class="sm:col-span-3 px-10">
@@ -71,7 +71,11 @@
                         
                         <input type="hidden" name="step" value="1">
 
-                        <div class="flex mt-6 mb-2 justify-end">
+                        <div class="flex mt-6 mb-2 justify-between">
+                            <a href="{{ url()->previous() }}" class="flex px-16 bg-white border border-gray-500 text-gray-700 hover:bg-gray-500 hover:text-white justify-center items-center">
+                                Back 
+                            </a>
+
                             <button type="submit" class="my-button">
                              Next
                             </button>
