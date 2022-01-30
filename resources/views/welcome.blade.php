@@ -17,9 +17,9 @@
                 <form action="/proceed" type="GET">
                     @csrf
                     <div class="flex flex-col mb-3">
-                        <label for="name" class="my-form-label">{{ __('Full Name') }}</label>
-                        <input type="text" name="name" value="{{ old('name') }}" class="my-form-input 
-                            @error('name') bg-red-200 border border-red-500 @enderror" required autocomplete="name">
+                        <label for="full_name" class="my-form-label">{{ __('Full Name') }}</label>
+                        <input type="text" name="full_name" value="{{ old('full_name') }}" class="my-form-input 
+                            @error('full_name') bg-red-200 border border-red-500 @enderror" required autocomplete="full_name">
                         @error('name')
                             <span class="mt-1 px-1 bg-red-200 text-red-500" role="alert">
                                 <strong class="text-sm">{{ $message }}</strong>
@@ -47,7 +47,7 @@
                         @enderror                            
                     </div>
                     <div class="flex flex-col mb-3">
-                        <label for="type" class="my-form-label">{{ __('ID/Passport Number') }}</label>
+                        <label for="type" class="my-form-label">{{ __('Permit Type') }}</label>
                         <select name="permit_type" id="type">
                             <option value="0">Day Care Center</option>
                             <option value="1">Burial Permit</option>

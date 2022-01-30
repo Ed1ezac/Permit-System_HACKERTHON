@@ -19,7 +19,7 @@ class ApplicationsController extends Controller
         //dd($request);
         $step = 1;
 
-        validate();
+        $this->validateApplication();
 
         switch($step){
             case 1:
@@ -54,7 +54,7 @@ class ApplicationsController extends Controller
     }
     
 
-    private function validate(){
+    private function validateApplication(){
         $request = request();
 
         switch($step){
