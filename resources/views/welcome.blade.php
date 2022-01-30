@@ -1,6 +1,7 @@
 @extends('layouts.landing-header')
     
 @section('content')
+<<<<<<< HEAD
 <section class="pt-10 my-16 flex">
     <div class="sm:grid sm:grid-cols-2 gap-4 max-w-7xl mb-16">
         <div class="col col-span-1 px-8">
@@ -62,6 +63,13 @@
             </div>
         </div>
 
+=======
+<section class="antialiased">
+    <div class="relative flex items-top justify-center min-h-screen bg-white dark:bg-gray-900 sm:items-center py-4 sm:pt-0">
+        <div class=" bg-gray-200">
+
+        </div>
+>>>>>>> bd2fce3ee7e8e0a705dcecefa3697957e2ffc3a2
     </div>
 </section>
 
