@@ -12,19 +12,18 @@
 
     <body class="bg-gray-100">
         <div id="app">
-            <div class="flex flex-row justify-between shadow bg-white h-16 px-8 mb-10">   
-                <div class="my-auto">
+            <div class="flex flex-row items-center justify-between shadow bg-white h-16 px-8 mb-10">   
+                <div class="">
                     <a href="/">
                         <img class="h-10 bg-gray-200 text-white rounded-full" alt="logo"/>
                     </a>
                 </div>
-                <div class="flex flex-row my-auto space-x-3">
+                <div class="flex flex-row space-x-3">
                     @if(Auth::check())
                         <div>Logout</div>
                     @else
                         <a class="hover:underline hover:text-gray-500" href="/MyApplications">My Applications</a>
-                        <a class="hover:underline hover:text-gray-500" href="{{route('login')}}">Login</a>
-                        <a class="hover:underline hover:text-gray-500" href="{{ route('register')}}">Register</a>
+                        <a class="hover:underline hover:text-gray-500" href="{{route('login')}}">Admin</a>
                     @endif
                 </div>
             </div>

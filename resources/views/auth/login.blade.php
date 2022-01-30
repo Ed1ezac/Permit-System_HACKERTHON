@@ -2,7 +2,9 @@
 
 @section('content')
 <div class="pt-20">
-    <div class="flex justify-center">
+
+<div class="flex justify-center">
+    <div class="flex flex-col items-center justify-center">
 
         <div class="bg-white w-96 shadow rounded">
             <div class="heading-text m-4 text-center">{{ __('Login') }}</div>
@@ -56,7 +58,14 @@
                 </form>
             </div>
         </div>
-        
+
+        <div class="block mt-8 mb-16">
+            <a class="bg-gray p-1 px-8 hover:underline hover:text-gray-500" href="{{ route('register')}}">Register</a>
+        </div>
     </div>
+
+</div>
+
+    
 </div>
 @endsection
