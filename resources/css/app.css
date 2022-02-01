@@ -22,4 +22,8 @@
     .my-button{
         @apply h-10 py-1 px-16 bg-gray-500 hover:bg-gray-800 focus:ring-2 ring-gray-500 ring-offset-1 text-white leading-4 tracking-wide font-medium;
     }
+
+    .my-form-alert{
+        @apply mt-1 px-1 bg-red-200 text-red-500;
+    }
 }
