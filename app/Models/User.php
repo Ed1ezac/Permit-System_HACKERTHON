@@ -13,6 +13,9 @@ class User extends Authenticatable
 {
     use HasRoles, Notifiable;
 
+    const Client = 'applicant';
+    const Moderator = 'moderator';
+    const Administrator = 'administrator';
     /**
      * The attributes that are mass assignable.
      *
@@ -42,4 +45,9 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function applications()
+    {
+        return $this->hasMany(Application::class);
+    }
 }
