@@ -27,7 +27,7 @@
                 v-bind:is-auth="{{ json_encode(Auth::check()) }}"
             ></navbar>
             
-            <div class="flex max-w-7xl 2xl:justify-center">
+            <div class="flex 2xl:justify-center">
                 @yield('content')
             </div>
         </div>

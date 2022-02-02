@@ -1,8 +1,7 @@
 @extends('layouts.landing-header')
 
 @section('content')
-
-    <main class="px-8 sm:pl-20 pr-6 pt-20">
+    <main class="flex w-full 2xl:justify-center flex-grow pt-20 pb-10">
         @yield('features')
     </main>
 @endsection
