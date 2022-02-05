@@ -1,26 +1,33 @@
-@extends('layouts.landing-header')
-    
-@section('content')
-<section class="pt-10 my-16 flex">
-    <div class="sm:grid sm:grid-cols-2 gap-4 max-w-7xl mb-16">
-        <div class="col col-span-1 px-8">
-            <h3 class="text-headings font-headings text-5xl font-medium">Apply For A Permit</h3>
-            <p class="supporting-text mt-8">Apply for various permits for the Department
-                of Trade and Industry such as Daycare centers, burial permit, noise and
-                nuisance and many more permits. 
-            </p>
-            <div class="mt-8">How does it work?</div>
-        </div>
+@extends('layouts.dashboard-header')
 
-        <div class="col-span-1 px-8">
-            <div class="bg-white rounded shadow-md p-4">
-                <form action="{{ route('basic.details.post') }}" type="POST">
+@section('features')
+<section class="w-full max-w-7xl">
+    <div>
+        <div class="flex flex-row items-end justify-between mx-8 sm:mx-16">
+            <h5 class="text-heading text-base font-medium">Permit Application</h5>
+            <!---a href="#" class="my-button-small flex items-center">
+                <div class="">
+                    Save
+                </div> 
+            </!---a -->   
+        </div>
+        <div class="mt-2 border-t-2 border-gray-300 mx-8 sm:mx-16"></div>
+    </div>
+    <div class="md:grid md:grid-cols-5 gap-4 mb-16 mt-3 mx-8 sm:mx-16">
+
+        <div class="hidden md:block sm:col-span-2 px-8">
+            <application-progress step="{{1}}"></application-progress>
+        </div>
+        
+        <div class="sm:col-span-3 px-8">
+            <div class="bg-white rounded shadow-md py-4 px-6 max-w-lg">
+                <form action="{{ route('basic.details.post') }}" method="POST">
                     @csrf
                     <div class="flex flex-col mb-3">
                         <label for="full_name" class="my-form-label">{{ __('Full Name') }}</label>
                         <input type="text" name="full_name" value="{{ old('full_name') }}" class="my-form-input 
                             @error('full_name') bg-red-200 border border-red-500 @enderror" required autocomplete="full_name">
-                        @error('name')
+                        @error('full_name')
                             <span class="my-form-alert" role="alert">
                                 <strong class="text-sm">{{ $message }}</strong>
                             </span>
@@ -66,10 +73,8 @@
                     </div>
                 </form>
             </div>
-        </div>
 
+        </div>
     </div>
 </section>
-
 @endsection
-

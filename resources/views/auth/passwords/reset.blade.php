@@ -1,16 +1,13 @@
 @extends('layouts.landing-header')
 
 @section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Reset Password') }}</div>
-
-                <div class="card-body">
+<div class="pt-20 pb-10 w-full">
+    <div class="flex flex-row justify-center mt-6 xl:mt-16">
+        <div class="bg-white shadow rounded w-96 mx-8">
+            <div class="text-heading text-center mt-4">{{ __('Reset Password') }}</div>
+            <div class="p-4">
                     <form method="POST" action="{{ route('password.update') }}">
                         @csrf
-
                         <input type="hidden" name="token" value="{{ $token }}">
 
                         <div class="row mb-3">

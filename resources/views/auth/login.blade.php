@@ -4,7 +4,7 @@
 <div class="pt-20 pb-10 w-full">
     <div class="flex flex-row justify-center mt-6 xl:mt-16">
         <div class="bg-white shadow rounded w-96 mx-8">
-            <div class="heading-text text-center mt-4">{{ __('Sign in') }}</div>
+            <div class="text-heading text-center mt-4">{{ __('Sign in') }}</div>
             <div class="p-4">
                 <form method="POST" action="{{ route('login') }}">
                     @csrf

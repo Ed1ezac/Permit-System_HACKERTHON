@@ -10,7 +10,7 @@
         @stack('page-css')
     </head>
 
-    <body class="bg-gray-100">
+    <body class="bg-gray-100 font-body">
         <div id="app">
             <navbar
                 logo-uri="{{asset('logo.svg')}}" 

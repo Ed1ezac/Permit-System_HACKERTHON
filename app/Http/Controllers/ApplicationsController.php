@@ -4,74 +4,78 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Http\Requests\BasicDetailsRequest;
+use App\Http\Requests\BusinessDetailsRequest;
+use App\Http\Requests\UploadDocumentsRequest;
 
 class ApplicationsController extends Controller
 {
-    //
-
-    public function index(){
-
-        return view('welcome');
+    //step 1
+    public function index(Request $request){
+        $application = $request->session()->get('application');
+        return view('welcome', compact('application'));
     }
 
-    public function proceed(Request $request){
+    public function basicInformation(Request $request){
+        $application = $request->session()->get('application');
+        return view('application.basic-details', compact('application'));
+    }
 
-        //dd($request);
-        $step = 1;
+    public function postBasicInformation(BasicDetailsRequest $request){
+        if(empty($request->session()->get('application'))){
+            $application = array('Name' => 'Ed', 'Id' => '282372312');
+            //$application->fill($validatedData);
+            $request->session()->put('application', $application);
 
-        $this->validateApplication();
-
-        switch($step){
-            case 1:
-                return $this->businessDetails(); 
-            case 2:
-                return $this->uploadDocuments();
-            case 3:
-                return $this->payment();
+        }else{
+            $application = $request->session()->get('application');
+            //$application->fill($validatedData);
+            $request->session()->put('application', $application);
         }
-    } 
-
-    //number 2
-    public function businessDetails(){
-
-        //
-        return view('appliction.business_details');
+        return redirect()->route('business.details');
     }
 
-    public function uploadDocuments(){
-
-        return view('appliction.upload_documents');
+    //step 2
+    public function businessDetails(Request $request){
+        $application = $request->session()->get('application');
+        return view('application.business_details', compact('application'));
     }
 
-    public function payment(){
-        
-        return view('appliction.payment');
+    public function postBusinessDetails(BusinessDetailsRequest $request){
+        $application = $request->session()->get('application');
+        //$product->fill($validatedData);
+        $request->session()->put('application', $application);
+        return redirect()->route('upload.documents');
+    }
+
+    //step 3
+    public function uploadDocuments(Request $request){
+        $application = $request->session()->get('application');
+        return view('application.upload_documents');
+    }
+
+    public function postUploadDocuments(UploadDocumentsRequest $request){
+        $application = $request->session()->get('application');
+        //$product->fill($validatedData);
+        $request->session()->put('application', $application);
+        return redirect()->route('pay');
+    }
+
+    //step 4
+    public function payment(Request $request){
+        $application = $request->session()->get('application');
+        return view('application.payment', compact('application'));
+    }
+
+    //submit
+    public function postPayment(){
+        return view('application.payment');
     }
 
     public function myApplications(){
-
-        return view('appliction.my_applications');
-    }
-    
-
-    private function validateApplication(){
-        $request = request();
-        $step = $request->input('step');
-        switch($step){
-            case 1:
-                $this->validateBasicInfo();
-            break;
-            case 2:
-                break;
-        }
-    }
-
-    private function validateBasicInfo(){
-
+        return view('application.my_applications');
     }
 
     public function myPermits(){
-
         return view('auth.my_permits');
     }
 

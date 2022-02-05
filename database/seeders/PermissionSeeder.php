@@ -20,14 +20,23 @@ class PermissionSeeder extends Seeder
     
          //create permissions
         Permission::create(['name' => 'submit applications']);
+        Permission::create(['name' => 'view permits']);
+        Permission::create(['name' => 'assess applications']);
         Permission::create(['name' => 'approve applications']);
-        Permission::create(['name' => 'suspend users']);
+        Permission::create(['name' => 'control users']);
 
-        $role = Role::create(['name' => 'applicant']);
+        $role = Role::create(['name' => 'user']);
         $role->givePermissionTo('submit applications');
 
-        $role = Role::create(['name' => 'moderator'])
-            ->givePermissionTo(['submit applications', 'approve applications']);
+        $role = Role::create(['name' => 'issuing-officer'])
+            ->givePermissionTo(['submit applications', 'assess applications']);
+
+            $role = Role::create(['name' => 'authorising-officer'])
+            ->givePermissionTo(['submit applications','assess applications',
+                'approve applications']);
+
+        $role = Role::create(['name' => 'receiving-officer'])
+            ->givePermissionTo(['submit applications', 'view permits']);
 
         $role = Role::create(['name' => 'administrator']);
         $role->givePermissionTo(Permission::all());

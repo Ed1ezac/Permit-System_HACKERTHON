@@ -3,13 +3,19 @@
         <nav class="flex flex-row h-16 items-center justify-between">   
             <div class="">
                 <a href="/">
-                    <img class="h-10 bg-gray-200 text-white rounded-full" alt="logo"/>
+                <div class="flex items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-14 w-7 text-gray-800" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
+                    </svg>
+                    <div class="text-headnings font-semibold text-gray-900 ml-1">Alpha</div>
+                </div>
                 </a>
             </div>
             <div class="flex flex-row space-x-3">
-                <a v-if="isAuth && isAdmin" class="hover:underline hover:text-gray-500" href="/MyApplications">Users</a>
-                <a v-if="isAuth && isModerator" class="hover:underline hover:text-gray-500" href="/MyApplications">Approval Area</a>
-                <a v-if="isAuth" class="hover:underline hover:text-gray-500" href="/MyApplications">My Permits</a>
+                <!---&& isModerator" ,  && isAdmin--->
+                <a v-if="isAuth" class="hover:text-gray-500" href="/administrator">Admin</a>
+                <a v-if="isAuth"  class="hover:text-gray-500" href="/Officer/Panel">Officer</a>
+                <a v-if="isAuth" class="hover:text-gray-500" href="/home">Home</a>
                 <a v-if="isAuth" v-on:click.prevent="logout" href="logout" class="hover:underline hover:text-gray-500">Logout</a>
                 <!----->
                 <a v-if=!isAuth class="hover:underline hover:text-gray-500" href="/login">Login</a>

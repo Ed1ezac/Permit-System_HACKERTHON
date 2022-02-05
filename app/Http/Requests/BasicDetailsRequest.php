@@ -24,7 +24,7 @@ class BasicDetailsRequest extends FormRequest
     public function rules()
     {
         return [
-            'name' => 'required|min:4',
+            'full_name' => 'required|min:4',
             'email' => 'required|email',
             'identity_no' => 'required|numeric|min:9',
             'permit_type' => 'required',
@@ -32,11 +32,11 @@ class BasicDetailsRequest extends FormRequest
     }
 
     public function messages()
-{
-    return [
-        'identity_no.numeric' => 'The Identity number must be a number',
-        'identity_no.required' => 'The Identity number is required',
-        'identity_no.min'=>'The Identity number should be at least 9 digits'
-    ];
-}
+    {
+        return [
+            'identity_no.numeric' => 'The Identity number must be a number',
+            'identity_no.required' => 'The Identity number is required',
+            'identity_no.min'=>'The Identity number should be at least 9 digits'
+        ];
+    }
 }
