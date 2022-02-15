@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ApplicationsController;
+use App\Http\Controllers\LondonController;
+use App\Http\Controllers\GoodnightController;
 
 
 /*
@@ -25,6 +27,7 @@ Route::get('/UploadDocuments', [ApplicationsController::class, 'uploadDocuments'
 Route::get('/proceed', [ApplicationsController::class, 'proceed']);
 Route::get('/MyPermits', [ApplicationsController::class, 'MyPermits']);
 Route::get('/Payments', [ApplicationsController::class, 'payment']);
+
 
 
 
