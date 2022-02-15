@@ -10,25 +10,26 @@
         @stack('page-css')
     </head>
 
-    <body class="bg-gray-100">
+    <body class="bg-gray-100 font-body">
         <div id="app">
-            <div class="flex flex-row items-center justify-between shadow bg-white h-16 px-8 mb-10">   
-                <div class="">
-                    <a href="/">
-                        <img class="h-10 bg-gray-200 text-white rounded-full" alt="logo"/>
-                    </a>
-                </div>
-                <div class="flex flex-row space-x-3">
-                    @if(Auth::check())
-                        <div>Logout</div>
-                    @else
-                        <a class="hover:underline hover:text-gray-500" href="/MyApplications">My Applications</a>
-                        <a class="hover:underline hover:text-gray-500" href="{{route('login')}}">Admin</a>
-                    @endif
-                </div>
+            <navbar
+                logo-uri="{{asset('logo.svg')}}" 
+                v-bind:is-admin="{{ json_encode(
+                    Auth::check() ?
+                    Auth::user()->hasRole('administrator')
+                    : false
+                )  }}"
+                v-bind:is-moderator="{{ json_encode(
+                    Auth::check() ?
+                    Auth::user()->hasRole('moderator')
+                    : false
+                )  }}" 
+                v-bind:is-auth="{{ json_encode(Auth::check()) }}"
+            ></navbar>
+            
+            <div class="flex 2xl:justify-center">
+                @yield('content')
             </div>
-
-            @yield('content')
         </div>
 
         <script src="{{ asset('js/app.js') }}"></script>

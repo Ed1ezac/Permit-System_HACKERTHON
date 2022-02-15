@@ -1,10 +1,13 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand:ital,wght@0,100;0,300;0,400;0,500;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Abel:ital,wght@0,100;0,300;0,400;0,500;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,700;1,800;1,900&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer components{
     .heading-text{
-        @apply text-lg font-semibold leading-6 text-gray-700;
+        @apply text-lg leading-6 text-gray-700;
     }
 
     .supporting-text{
@@ -21,5 +24,13 @@
 
     .my-button{
         @apply h-10 py-1 px-16 bg-gray-500 hover:bg-gray-800 focus:ring-2 ring-gray-500 ring-offset-1 text-white leading-4 tracking-wide font-medium;
+    }
+
+    .my-button-small{
+        @apply h-10 py-1 px-8 bg-gray-500 hover:bg-gray-800 focus:ring-2 ring-gray-500 ring-offset-1 text-white leading-4 tracking-wide font-medium;
+    }
+
+    .my-form-alert{
+        @apply mt-1 px-1 bg-red-200 text-red-500;
     }
 }
