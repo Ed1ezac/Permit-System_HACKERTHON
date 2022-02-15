@@ -22,6 +22,7 @@ use App\Http\Controllers\ImportPermitController;
 Route::get('/', [ApplicationsController::class, 'index'])->name('landing');
 
 
+
 Auth::routes();
 Route::middleware(['auth'])->group(function () {
 
