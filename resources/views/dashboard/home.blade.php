@@ -5,11 +5,6 @@
     <div>
         <div class="flex flex-row items-end justify-between mx-8 sm:mx-16">
             <h5 class="text-heading text-base font-medium">Dashboard</h5>
-            <!--a href="{{route('basic.details')}}" class="my-button-small flex items-center">
-                <div class="">
-                    New Permit
-                </div> 
-            </!--a -->
         </div>
         <div class="mt-2 border-t-2 border-gray-300 mx-8 sm:mx-16"></div>
     </div>
@@ -152,10 +147,10 @@
     <div class="mt-4">
         <div class="flex mx-8 sm:mx-16 gap-4">
             <div class="flex flex-col gap-4">
-                <h5 class="text-gray-900 text-2xl font-medium">Register as an Exporter/Importer</h5>
+                <h5 class="text-gray-900 text-2xl font-medium">Applply for an Export/Import permit</h5>
                 <p class="supporting-text">You are not registered as an importer or exporter of goods yet. Please register to be able to create a new permit.</p>  
                 <div class="flex flex-wrap gap-4 mt-4">
-                    <a href="#" class="bg-white w-60 p-3 rounded hover:shadow-md border border-transparent hover:border-gray-100">
+                    <a href="{{route('import.basic.details')}}" class="bg-white w-60 p-3 rounded hover:shadow-md border border-transparent hover:border-gray-100">
                         <div class="flex gap-2">
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-7 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
@@ -163,7 +158,7 @@
                             <div>
                                 <h5 class="font-headings text-headings tracking-wider font-semibold text-gray-600">IMPORTER</h5> 
                                 <div class=" text-sm text-gray-400">
-                                Import Registration
+                                Import Permit & Rebate
                                 </div>
                             </div>
                         </div>
@@ -176,7 +171,7 @@
                             <div>
                                 <h5 class="font-headings text-headings tracking-wider font-semibold text-gray-600">EXPORTER</h5> 
                                 <div class=" text-sm text-gray-400">
-                                Exporter Scrap and Waste
+                                Export Permit
                                 </div>
                             </div>
                         </div>

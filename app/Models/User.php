@@ -13,8 +13,10 @@ class User extends Authenticatable
 {
     use HasRoles, Notifiable;
 
-    const Client = 'applicant';
-    const Moderator = 'moderator';
+    const User = 'user';
+    const IssuingOfficer = 'issuing-officer';
+    const AuthorisingOfficer = 'authorising-officer';
+    const ReceivingOfficer = 'receiving-officer';
     const Administrator = 'administrator';
     /**
      * The attributes that are mass assignable.
