@@ -50,7 +50,7 @@ Visit the [Laravel documentation on testing](https://laravel.com/docs/8.x/testin
 I dont consider this system worth working on because it was specifically made for a purpose (the hackerthon competition) and I can't think of a way to commercialize it, YET. If you want to, you can clone and continue working on it.
 
 ## Evolution
-Unfortunately this system is died prematurely before it was born.
+Unfortunately this system is died prematurely before it was born 😭.
 
 ## License
 This project is under the [MIT License](https://choosealicense.com/licenses/gpl-3.0/)
