@@ -3,7 +3,7 @@
 
 ## Project Status
 <p align="center">
-<img src="https://img.shields.io/badge/development-Adandoned-red" alt="development status"/>
+<img src="https://img.shields.io/badge/development-Abandoned-red" alt="development status"/>
 </p>
 
 ## Technology Used
